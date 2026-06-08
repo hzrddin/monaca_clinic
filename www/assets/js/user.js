@@ -18,8 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     password: formData.get('password')
   };
 
-  // Make sure it points to login.php this time!
-  const serverUrl = 'https://chowder-cosmetics-reentry.ngrok-free.dev/login.php'; 
+  const serverUrl = 'https://chowder-cosmetics-reentry.ngrok-free.dev/myclinic/login.php'; 
 
   // Send to backend
   fetch(serverUrl, {
