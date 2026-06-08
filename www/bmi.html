@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Clinic</title>
+  <title>BMI</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -63,7 +63,7 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="home.html" class="logo d-flex align-items-center">
-          <h1 class="sitename">Account Registration</h1>
+          <h1 class="sitename">BMI</h1>
         </a>
       </div>
 
@@ -74,38 +74,44 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="hero-content"
-          style="margin: 0 20rem; border-style: solid; border-radius: 14px; padding: 0rem 3.2rem 1.5rem; background-color: rgba(189, 187, 188, 0.08); border-width: 3px;">
-
-          <h1 data-aos="fade-right" data-aos-delay="300">
-            Welcome to <span class="highlight">Swiftcare Clinic</span>
-          </h1>
-          <h2>Your Ultimate Healthcare Companion</h2>
-          <h4>Enter Your Login Details</h4>
-
-          <form action="home.html">
-            <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <div class="form-check text-start my-3">
-              <a href="signUp.html">Create Account</a>
-            </div>
-            <button class="btn btn-primary w-100 py-2" type="submit">
-              Sign in
-            </button>
+    <section>
+      <div style="margin-top: 5rem" class="container">
+        <div class="mb-3">
+          <label for="weight" class="form-label text-secondary">Weight (kg)</label>
+          <input type="number" class="form-control form-control-lg" id="weight" placeholder="e.g., 70" required>
         </div>
-        </form>
+
+        <div class="mb-4">
+          <label for="height" class="form-label text-secondary">Height (cm)</label>
+          <input type="number" class="form-control form-control-lg" id="height" placeholder="e.g., 175" required>
+        </div>
+
+        <button onclick="calculateBMI()" class="btn btn-primary btn-lg w-100 mb-3">Calculate BMI</button>
+
+        <div id="resultBox" class="text-center d-none p-3 rounded bg-light border">
+          <h4 class="mb-1">BMI: <span id="bmiValue"></span></h4>
+          <h5 id="bmiCategory" class="mb-0 fw-bold"></h5>
+        </div>
+
       </div>
     </section><!-- /Hero Section -->
+
+    <section class="mx-2">
+      <h3>Patient History</h3>
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">BMI</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="bmiLogBody">
+        </tbody>
+      </table>
+      <button class="btn btn-outline-danger btn-sm" onclick="clearLog()"> Clear All History</button>
+    </section>
 
     <!-- Scroll Top -->
     <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -123,6 +129,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
+    <script src="assets/js/bmi.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
