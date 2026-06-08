@@ -1,4 +1,4 @@
-    const BASE_URL = "https://chowder-cosmetics-reentry.ngrok-free.dev/myclinic";
+    const BASE_URL = "https://chowder-cosmetics-reentry.ngrok-free.dev/myclinic/";
 
     function fetchUsers() {
       fetch(BASE_URL + "getUsers.php", {
@@ -14,15 +14,15 @@
           data.data.forEach(user => {
             rows += `
               <tr>
-                <td>${user.id}</td>
-                <td contenteditable="true" id="name-${user.id}">${user.Name || "-"}</td>
-                <td contenteditable="true" id="address-${user.id}">${user.Address || "-"}</td>
-                <td contenteditable="true" id="phone-${user.id}">${user.PhoneNo || "-"}</td>
-                <td contenteditable="true" id="username-${user.id}">${user.username || "-"}</td>
-                <td contenteditable="true" id="status-${user.id}">${user.UserStatus || "-"}</td>
+                <td>${user.noid}</td>
+                <td contenteditable="true" id="name-${user.noid}">${user.userName || "-"}</td>
+                <td contenteditable="true" id="address-${user.noid}">${user.userAdd || "-"}</td>
+                <td contenteditable="true" id="phone-${user.noid}">${user.phone || "-"}</td>
+                <td contenteditable="true" id="username-${user.noid}">${user.user_name || "-"}</td>
+                <td contenteditable="true" id="status-${user.noid}">${user.userStatus || "-"}</td>
                 <td>
-                  <button class="btn btn-success btn-sm" onclick="updateUser(${user.id})">Save</button>
-                  <button class="btn btn-danger btn-sm" onclick="deleteUser(${user.id})">Delete</button>
+                  <button class="btn btn-success btn-sm" onclick="updateUser(${user.noid})">Save</button>
+                  <button class="btn btn-danger btn-sm" onclick="deleteUser(${user.noid})">Delete</button>
                 </td>
               </tr>`;
           });
