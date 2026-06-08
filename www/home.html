@@ -122,40 +122,13 @@
                   <th scope="col" class="text-nowrap border-0 py-3">Username</th>
                   <th scope="col" class="text-nowrap border-0 py-3">Password</th>
                   <th scope="col" class="text-nowrap border-0 py-3">Status</th>
+                  <th scope="col" class="text-nowrap border-0 py-3">Action</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>Otto</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-              </tbody>
+              <tbody id="userTableBody"></tbody>
             </table>
           </div>
-
+          <button class="btn btn-primary mt-3" onclick="fetchUsers()">Reload Table</button>
         </div>
       </div>
     </section>
@@ -176,6 +149,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/db.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
