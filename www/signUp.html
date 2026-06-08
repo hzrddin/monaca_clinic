@@ -75,82 +75,89 @@
 
     <section id="hero" class="hero section mt-5">
       <div class="container px-4">
-        <div class="card shadow-sm border-0">
+        <div class="card shadow-sm border-0 mx-auto"
+          style="max-width: 800px; background-color: rgba(189, 187, 188, 0.08); border: 3px solid #dee2e6; border-radius: 14px;">
           <div class="card-body p-4">
             <h2 class="text-center mb-4 text-primary fw-bold">Sign Up</h2>
 
-            <form class="row g-3 needs-validation" novalidate="">
-              <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="regFirstName" required="">
+            <form id="signupForm" class="row g-3 needs-validation" novalidate>
+
+              <div class="col-md-6">
+                <label for="regFirstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="regFirstName" name="firstname" required>
                 <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your first name.</div>
               </div>
-              <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="regLastName" required="">
+
+              <div class="col-md-6">
+                <label for="regLastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="regLastName" name="lastname" required>
                 <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your last name.</div>
               </div>
-              <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
+
+              <div class="col-md-6">
+                <label for="regUsername" class="form-label">Username</label>
                 <div class="input-group has-validation">
                   <span class="input-group-text" id="inputGroupPrepend">@</span>
-                  <input type="text" class="form-control" id="regUsername" aria-describedby="inputGroupPrepend"
-                    required="">
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
+                  <input type="text" class="form-control" id="regUsername" name="username"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">Please choose a username.</div>
                 </div>
               </div>
+
               <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="regCity" required="">
-                <div class="invalid-feedback">
-                  Please provide a valid city.
-                </div>
+                <label for="regPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="regPassword" name="password" required>
+                <div class="invalid-feedback">Please enter a password.</div>
               </div>
+
+              <div class="col-md-12">
+                <label for="regPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="regPhone" name="phone" required>
+                <div class="invalid-feedback">Please provide a phone number.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="regCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="regCity" name="city" required>
+                <div class="invalid-feedback">Please provide a valid city.</div>
+              </div>
+
               <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="regState" required="">
-                  <option selected="" disabled="" value="">
-                    Choose...
-                  </option>
+                <label for="regState" class="form-label">State</label>
+                <select class="form-select" id="regState" name="state" required>
+                  <option selected disabled value="">Choose...</option>
                   <option>Sarawak</option>
                   <option>Johor</option>
                   <option>Sabah</option>
                   <option>Penang Island</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
-                </div>
+                <div class="invalid-feedback">Please select a valid state.</div>
               </div>
+
               <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="regZip" required="">
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
+                <label for="regZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="regZip" name="zip" required>
+                <div class="invalid-feedback">Please provide a valid zip.</div>
               </div>
+
               <div class="col-12">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                   <label class="form-check-label" for="invalidCheck">
                     Agree to terms and conditions
                   </label>
-                  <div class="invalid-feedback">
-                    You must agree before submitting.
-                  </div>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
                 </div>
               </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">
-                  Submit form
-                </button>
-              </div>
-            </form>
 
-            <!-- Footer link -->
-            <div class="text-center mt-4">
-            </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Register</button>
+              </div>
+
+            </form>
+            
           </div>
         </div>
       </div>
